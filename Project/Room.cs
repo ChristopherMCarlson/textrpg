@@ -17,7 +17,7 @@ namespace CastleGrimtol.Project
         return Exits[direction];
       }
       //fail message here
-      System.Console.WriteLine("You walk into a wall. Were you hoping for a secret exit?");
+      System.Console.WriteLine("Why don't you try going a different direction, pal? That's a wall.");
       return this;
     }
     public Room(string name, string description)
@@ -31,6 +31,11 @@ namespace CastleGrimtol.Project
     public void TakeItem(string itemName)
     {
 
+    }
+
+    internal void GetDescription()
+    {
+      System.Console.WriteLine($"{Description}");
     }
   }
 }
